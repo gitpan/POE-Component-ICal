@@ -18,7 +18,7 @@ WriteMakefile
           'Carp'                     => 0
         , 'DateTime'                 => 0
         , 'DateTime::Event::ICal'    => 0
-        , 'POE::Kernel'              => 0
+        , 'POE'                      => 0
         , 'POE::Component::Schedule' => 0
 ######### build_requires
         , 'Test::More'               => 0

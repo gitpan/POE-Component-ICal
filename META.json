@@ -1,10 +1,10 @@
 {
    "abstract" : "Schedule POE events using rfc2445 recurrences.",
    "author" : [
-      "LoÃ¯c TROCHET <losyme@gmail.com>"
+      "Loïc TROCHET <losyme@gmail.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110580",
+   "generated_by" : "ExtUtils::MakeMaker version 6.59, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "perl_5"
    ],
@@ -13,15 +13,21 @@
       "version" : "2"
    },
    "name" : "POE-Component-ICal",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc"
+      ]
+   },
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::More" : 0
+            "ExtUtils::MakeMaker" : 0
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : 0
+            "ExtUtils::MakeMaker" : 0
          }
       },
       "runtime" : {
@@ -29,22 +35,12 @@
             "Carp" : 0,
             "DateTime" : 0,
             "DateTime::Event::ICal" : 0,
+            "POE" : 0,
             "POE::Component::Schedule" : 0,
-            "POE::Kernel" : 0
+            "Test::More" : 0
          }
       }
    },
-   "provides" : {
-      "POE::Component::ICal" : {
-         "file" : "lib/POE/Component/ICal.pm",
-         "version" : "0.01"
-      }
-   },
    "release_status" : "stable",
-   "resources" : {
-      "license" : [
-         "http://dev.perl.org/licenses/"
-      ]
-   },
-   "version" : "0.01"
+   "version" : "0.02"
 }

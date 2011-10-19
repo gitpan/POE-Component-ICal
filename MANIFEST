@@ -17,5 +17,5 @@ t/98_pod-coverage.t
 t/98_pod.t
 t/98_portability.t
 t/99_end.t
-META.yml
-META.json
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

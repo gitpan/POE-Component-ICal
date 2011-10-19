@@ -1,5 +1,11 @@
-
-### 05_two.t ################################################################################################ LOSYME ###
+#######
+##
+##----- LOSYME
+##----- POE::Component::ICal
+##----- Schedule POE events using rfc2445 recurrences
+##----- 05_two.t
+##
+########################################################################################################################
 
 use strict;
 use warnings;
@@ -9,7 +15,7 @@ use POE::Component::ICal;
 
 my $tick_count = 5;
 my $tock_count = 2;
-plan( tests => ($tick_count * 4) + 2 + ($tock_count * 4) + 2 + 1);
+plan(tests => ($tick_count * 4) + 2 + ($tock_count * 4) + 2 + 1);
 
 POE::Session->create
 (
@@ -17,7 +23,7 @@ POE::Session->create
     {
         _start => sub
         {
-            pass( '_start' );
+            pass('_start');
             POE::Component::ICal->add_schedule
             (
                   'tick'                                         # schedule
@@ -42,13 +48,13 @@ POE::Session->create
             ok($$ref_count > 0, 'ARG1 > 0');
             if (--$$ref_count == 0)
             {
-                pass( "remove $schedule" );
-                POE::Component::ICal->remove( $schedule );
+                pass("remove $schedule");
+                POE::Component::ICal->remove($schedule);
             }
         },
         _stop => sub
         {
-            pass( '_stop' );
+            pass('_stop');
         }
     }
 );
@@ -57,6 +63,4 @@ POE::Kernel->run;
 
 ok(1);
 
-__END__
-
-######################################################### END ##########################################################
+####### END ############################################################################################################

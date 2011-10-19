@@ -1,11 +1,11 @@
-
-### README ################################################################################################## LOSYME ###
-
-NAME
-----
-
-    POE::Component::ICal
-        - Schedule POE events using rfc2445 recurrences.
+#######
+##
+##----- LOSYME
+##----- POE::Component::ICal
+##----- Schedule POE events using rfc2445 recurrences
+##----- README
+##
+#######
 
 INSTALLATION
 ------------
@@ -24,8 +24,8 @@ INSTALLATION
         ./Build test
         ./Build install
         
-COPYRIGHT & LICENSE 
--------------------
+COPYRIGHT AND LICENSE 
+---------------------
 
     Copyright (C) 2011 by Loïc TROCHET.
 
@@ -34,4 +34,4 @@ COPYRIGHT & LICENSE
 
     See http://dev.perl.org/licenses/ for more information.
 
-######################################################### END ##########################################################
+####### END ############################################################################################################

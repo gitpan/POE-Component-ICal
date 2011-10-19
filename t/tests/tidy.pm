@@ -1,12 +1,19 @@
+#######
+##
+##----- LOSYME
+##----- POE::Component::ICal
+##----- Schedule POE events using rfc2445 recurrences
+##----- tests::tidy
+##
+########################################################################################################################
 
-package tests::tidy; #==================================================================================================
-############################################################################################################# LOSYME ###
+package tests::tidy;
 
 use strict;
 use warnings;
 use Test::More;
 use Carp;
-use base qw( Exporter );
+use base qw(Exporter);
 
 our @EXPORT
 = qw
@@ -18,7 +25,6 @@ our @EXPORT
 );
 
 sub import
-###=====================================================================================================================
 {
     my $class = shift;
     my ($option, $cmd_name, @args) = @_;
@@ -34,24 +40,21 @@ sub import
         ); 
         
         croak "Unknown command: $cmd_name" unless exists $cmds{$cmd_name};
-        return $cmds{$cmd_name}( @args ); 
+        return $cmds{$cmd_name}(@args); 
     }
     
     $class->export_to_level(1, $class, @_);
 }
 
 sub t_start
-###=====================================================================================================================
 {
-    plan( tests => 1 );
-    diag( "\n===START", '=' x 72 );
-    diag( "Perl $]\n$^X\n", '-' x 80 );
-    ok( 1 );
+    plan(tests => 1);
+    diag("\n===START", '=' x 72);
+    diag("Perl $]\n$^X\n", '-' x 80);
+    ok(1);
 }
 
-
 sub t_prerequisites
-###=====================================================================================================================
 {
     my $requires;
 
@@ -64,38 +67,37 @@ sub t_prerequisites
 YAML
     }
 
-    plan( skip_all => 'META.yml not present' ) unless defined $requires;
-    plan( tests => 1 );
+    plan(skip_all => 'META.yml not present') unless defined $requires;
+    plan(tests => 1);
     
-    my $title = scalar( keys %$requires ) . ' module(s) are required';
+    my $title = scalar(keys %$requires) . ' module(s) are required';
     
     diag("\n", $title, "\n", ':' x length $title);
 
-    for my $module ( keys %$requires )
+    for my $module (keys %$requires)
     {
         eval "use $module ()";
         
-        if( $@ )
+        if ($@)
         {
-            diag( "====> WARNING: $module not found <====" );
+            diag("====> WARNING: $module not found <====");
         }
         else
         {
-            diag( "Using $module - v".( $module->VERSION or ${"${module}::VERSION"} or '' ));
+            diag("Using $module - v".( $module->VERSION or ${"${module}::VERSION"} or ''));
         }
     }
     
     diag(':' x 80);
     
-    ok( 1 );
+    ok(1);
 }
 
 sub t_load
-###=====================================================================================================================
 {
     my @modules = @_;
     
-    plan( tests => scalar @modules );
+    plan(tests => scalar @modules);
     
     my $l_name = 0;
     my $l_version = 0;
@@ -103,9 +105,9 @@ sub t_load
     my $l;
     my $used = {};
     
-    foreach my $module ( @modules )
+    foreach my $module (@modules)
     {
-        use_ok( $module ) or BAIL_OUT;
+        use_ok($module) or BAIL_OUT;
         
         no strict 'refs';
         $used->{$module} = ${"${module}::VERSION"};
@@ -137,15 +139,12 @@ sub t_load
 }
 
 sub t_end
-###=====================================================================================================================
 {
-    plan( tests => 1 );
-    diag( "\n===END", '=' x 74 );
-    ok( 1 );
+    plan(tests => 1);
+    diag("\n===END", '=' x 74);
+    ok(1);
 }
 
 1;
 
-__END__
-
-######################################################### END ##########################################################
+####### END ############################################################################################################

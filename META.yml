@@ -1,28 +1,27 @@
 ---
 abstract: 'Schedule POE events using rfc2445 recurrences.'
 author:
-  - 'LoÃ¯c TROCHET <losyme@gmail.com>'
+  - 'Loïc TROCHET <losyme@gmail.com>'
 build_requires:
-  Test::More: 0
+  ExtUtils::MakeMaker: 0
 configure_requires:
-  Module::Build: 0
+  ExtUtils::MakeMaker: 0
 dynamic_config: 1
-generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.110580'
+generated_by: 'ExtUtils::MakeMaker version 6.59, CPAN::Meta::Converter version 2.112150'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: POE-Component-ICal
-provides:
-  POE::Component::ICal:
-    file: lib/POE/Component/ICal.pm
-    version: 0.01
+no_index:
+  directory:
+    - t
+    - inc
 requires:
   Carp: 0
   DateTime: 0
   DateTime::Event::ICal: 0
+  POE: 0
   POE::Component::Schedule: 0
-  POE::Kernel: 0
-resources:
-  license: http://dev.perl.org/licenses/
-version: 0.01
+  Test::More: 0
+version: 0.02
