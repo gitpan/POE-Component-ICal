@@ -4,7 +4,7 @@
       "Loïc TROCHET <losyme@gmail.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.59, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.120351",
    "license" : [
       "perl_5"
    ],
@@ -22,25 +22,29 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : 0
+            "Test::More" : "0"
          }
       },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : 0
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "Carp" : 0,
-            "DateTime" : 0,
-            "DateTime::Event::ICal" : 0,
-            "POE" : 0,
-            "POE::Component::Schedule" : 0,
-            "Test::More" : 0
+            "Carp" : "0",
+            "DateTime" : "0",
+            "DateTime::Event::ICal" : "0",
+            "POE" : "0",
+            "POE::Component::Schedule" : "0"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.02"
+   "resources" : {
+      "repository" : {
+         "url" : "https://github.com/losyme/POE-Component-ICal"
+      }
+   },
+   "version" : "0.03"
 }
