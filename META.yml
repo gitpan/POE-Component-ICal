@@ -25,4 +25,4 @@ requires:
   POE::Component::Schedule: 0
 resources:
   repository: https://github.com/losyme/POE-Component-ICal
-version: 0.03
+version: 0.04

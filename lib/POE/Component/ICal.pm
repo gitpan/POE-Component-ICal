@@ -12,7 +12,7 @@ package POE::Component::ICal;
 use strict;
 use warnings FATAL => qw(all);
 
-our $VERSION   =   '0.03';
+our $VERSION   =   '0.04';
 our $AUTHORITY = 'LOSYME';
 
 use Carp qw(croak);
@@ -91,7 +91,7 @@ POE::Component::ICal - Schedule POE events using rfc2445 recurrences.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.04
 
 =head1 SYNOPSIS
 
@@ -274,7 +274,7 @@ Repository available at L<https://github.com/losyme/POE-Component-ICal>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright E<copy> 2011 by LoE<iuml>c TROCHET.
+Copyright (c) 2011-2012 by LoE<iuml>c TROCHET.
 
 This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
