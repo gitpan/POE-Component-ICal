@@ -1,37 +1,13 @@
-#######
-##
-##----- LOSYME
-##----- POE::Component::ICal
-##----- Schedule POE events using rfc2445 recurrences
-##----- README
-##
-########################################################################################################################
 
-INSTALLATION
-------------
 
-    To install this module, run the following commands:
+This archive contains the distribution POE-Component-ICal,
+version 0.130020:
 
-        perl Makefile.PL
-        make
-        make test
-        make install
-    
-    Alternatively, to install with Module::Build, you can use the following commands:
+  Schedule POE events using rfc2445 recurrences
 
-        perl Build.PL
-        ./Build
-        ./Build test
-        ./Build install
-        
-COPYRIGHT AND LICENSE 
----------------------
+This software is copyright (c) 2011 by Loïc TROCHET.
 
-    Copyright (C) 2011-2012 by Loïc TROCHET.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
-    This library is free software; you can redistribute it and/or modify it under the same
-    terms as Perl itself.
 
-    See http://dev.perl.org/licenses/ for more information.
-
-####### END ############################################################################################################

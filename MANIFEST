@@ -1,21 +1,17 @@
-MANIFEST
-README
 Changes
-Build.PL
+LICENSE
+MANIFEST
+META.json
+META.yml
 Makefile.PL
+POE-Component-ICal.komodoproject
+README
+dist.ini
 lib/POE/Component/ICal.pm
-t/test/tidy.pm
-t/00_start.t
-t/01_prerequisites.t
-t/02_load.t
-t/03_api.t
-t/04_basic.t
-t/05_two.t
-t/98_distribution.t
-t/98_manifest.t
-t/98_pod-coverage.t
-t/98_pod.t
-t/98_portability.t
-t/99_end.t
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)
+t/00-compile.t
+t/000-report-versions-tiny.t
+t/01_api.t
+t/02_basic.t
+t/03_two.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t
